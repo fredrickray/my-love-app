@@ -1,5 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import love from "../assets/love.png";
+import boyIcon from "../assets/boss.png";
+import girlIcon from "../assets/woman.png";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -9,6 +14,10 @@ export default function Home() {
   const [loveMessage, setLoveMessage] = useState('');
 
   const calculateMatch = () => {
+    if (!name.trim() || !crushName.trim()) {
+      alert('Please enter both names to calculate the match.');
+      return; // Exit the function if inputs are empty
+    }
     const randomScore = Math.floor(Math.random() * 100) + 1;
     setLoveScore(randomScore);
 
@@ -42,7 +51,7 @@ export default function Home() {
 
   return (
     <>
-      <img src="/src/assets/love.png" alt="love icon" className="logo" />
+      <img src={love} alt="love icon" className="logo" />
       <h2>Love Calculator</h2>
 
       <div>
@@ -53,7 +62,7 @@ export default function Home() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <img src="/src/assets/boss.png" alt="boss icon" />
+          <img src={boyIcon} alt="boss icon" />
         </div>
 
         <div className="input_container">
@@ -63,7 +72,7 @@ export default function Home() {
             value={crushName}
             onChange={(e) => setCrushName(e.target.value)}
           />
-          <img src="/src/assets/woman.png" alt="boss icon" />
+          <img src={girlIcon} alt="boss icon" />
         </div>
       </div>
 

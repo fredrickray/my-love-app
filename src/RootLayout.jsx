@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-
+import loveGif from "./assets/love-unscreen.gif"
 export default function RootLayout() {
   return (
     <>
@@ -8,10 +8,10 @@ export default function RootLayout() {
       </main>
 
       {/* position absolute elements */}
-      <img src="/src/assets/love-unscreen.gif" alt="love gif1" />
-      <img src="/src/assets/love-unscreen.gif" alt="love gif2" />
-      <img src="/src/assets/love-unscreen.gif" alt="love gif3" />
-      <img src="/src/assets/love-unscreen.gif" alt="love gif4" />
+      <img src={loveGif} alt="love gif1" />
+      <img src={loveGif} alt="love gif2" />
+      <img src={loveGif} alt="love gif3" />
+      <img src={loveGif} alt="love gif4" />
     </>
   );
 }
