@@ -162,15 +162,13 @@ main ~ img[alt='love gif4'] {
     width: 400px;
     height: 40px;
     margin-inline: auto;
+
+    > img {
+        top: 5px;
+      }
   }
 
-  img[src='/src/assets/boss.png'] {
-    top: 5px;
-  }
-
-  img[src='/src/assets/woman.png'] {
-    top: 5px;
-  }
+  
 
   main ~ img {
     width: 50px;

@@ -20,49 +20,48 @@ export default function Home() {
         color: "red",
         title: "Please en ter both names to calculate the match",
         showConfirmButton: false,
-        timer: 2500
+        timer: 3000
       })
       // alert('Please enter both names to calculate the match.');
       return; // Exit the function if inputs are empty
+    }
+    if (name == "fredrick" || name == "Fredrick") {
+      Swal.fire({
+        position: "top-right",
+        toast: true,
+        icon: "error",
+        title: "Kai kai kai change that name fast 🙄👀",
+        showConfirmButton: false,
+        timer: 3500
+      })
+      return;
     }
     const randomScore = Math.floor(Math.random() * 100) + 1;
     setLoveScore(randomScore);
     let loveMessage;
     if (randomScore >= 90) {
       loveMessage = `Congratulations! You and ${crushName} are a match made in heaven! 💖`
-      console.log(loveMessage);
     } else if (randomScore >= 80) {
       loveMessage`You and ${crushName} have a strong connection! Keep the love alive! ❤️`;
-      console.log(loveMessage);
     } else if (randomScore >= 70) {
       loveMessage = `Wow! There's a spark between you and ${crushName}! 🌟`;
-      console.log(loveMessage);
     } else if (randomScore >= 60) {
       loveMessage = `You and ${crushName} have potential! Nurture your relationship! 🌱`;
-      console.log(loveMessage);
     } else if (randomScore >= 50) {
       loveMessage = `It's a decent start between you and ${crushName}. Keep exploring! 🔍`;
-      console.log(loveMessage);
     } else if (randomScore >= 40) {
       loveMessage = `Hmm... You and ${crushName} might need to work on some things. 💔`;
-      console.log(loveMessage);
     } else if (randomScore >= 30) {
-      loveMessage = `There are differences between you and ${crushName}. Can you bridge them? 🌉`;
-      console.log(loveMessage);
+      loveMessage = `See ehn ${name}, this love na be by force sometimes.`;
     } else if (randomScore >= 20) {
       loveMessage = `A little effort could go a long way in your relationship with ${crushName}. 🌠`;
-      console.log(loveMessage);
     } else if (randomScore >= 10) {
-      loveMessage = `It's early days for you and ${crushName}. Time will tell! ⏳`;
-      console.log(loveMessage);
+      loveMessage = `Omo ${randomScore}% 😂💔💔 just give up`;
     } else {
-      loveMessage = `Hmm... The stars seem undecided about your relationship with ${crushName}. 🌌`;
-      console.log(loveMessage);
+      loveMessage = `E be like say this love na comedy show between you and ${crushName}. 🤡`;
     }
 
     console.log('clicked!!');
-    console.log(randomScore)
-    console.log(loveMessage);
     navigate('/result', { state: { randomScore, loveMessage, name, crushName } });
   };
 
