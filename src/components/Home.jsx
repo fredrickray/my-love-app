@@ -18,14 +18,14 @@ export default function Home() {
         toast: true,
         icon: "error",
         color: "red",
-        title: "Please en ter both names to calculate the match",
+        title: "Please enter both names to calculate the match",
         showConfirmButton: false,
         timer: 3000
       })
       // alert('Please enter both names to calculate the match.');
       return; // Exit the function if inputs are empty
     }
-    if (name == "fredrick" || name == "Fredrick") {
+    if (name.toLowerCase() == "fredrick" || crushName.toLowerCase() == 'fredrick') {
       Swal.fire({
         position: "top-right",
         toast: true,
