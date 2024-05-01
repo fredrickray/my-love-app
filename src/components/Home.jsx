@@ -25,7 +25,7 @@ export default function Home() {
       // alert('Please enter both names to calculate the match.');
       return; // Exit the function if inputs are empty
     }
-    if (name.toLowerCase() == "fredrick" || name.toLowerCase() == "tobe" || name.toLowerCase() == "tobechukwu" || name.toLowerCase() == "anyanwu" || crushName.toLowerCase() == 'fredrick' || crushName.toLowerCase() == 'tobe' || crushName.toLowerCase() == 'tobechukwu' || crushName.toLowerCase() == 'anyanwu') {
+    if (name.toLowerCase() == "fredrick" || name.toLowerCase() == 'fred' || name.toLowerCase() == "tobe" || name.toLowerCase() == "tobechukwu" || name.toLowerCase() == "anyanwu" || crushName.toLowerCase() == 'fredrick' || crushName.toLowerCase() == 'fred' || crushName.toLowerCase() == 'tobe' || crushName.toLowerCase() == 'tobechukwu' || crushName.toLowerCase() == 'anyanwu') {
       Swal.fire({
         position: "top-right",
         toast: true,
