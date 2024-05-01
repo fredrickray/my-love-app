@@ -49,25 +49,17 @@ input {
   width: 500px;
   height: 50px;
   margin-bottom: 20px;
+
+ > img  {
+      width: 30px;
+      height: 30px;
+      margin-inline: auto;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
 }
 
-img[src='/src/assets/boss.png'] {
-  width: 30px;
-  height: 30px;
-  margin-inline: auto;
-  position: absolute;
-  top: 10px;
-  left: 5px;
-}
-
-img[src='/src/assets/woman.png'] {
-  width: 30px;
-  height: 30px;
-  margin-inline: auto;
-  position: absolute;
-  top: 10px;
-  left: 5px;
-}
 
 button {
   background-color: #ff4528;
@@ -80,6 +72,10 @@ button {
   margin-top: 40px;
   font-size: 18px;
   cursor: pointer;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Other view of the page */
@@ -120,6 +116,7 @@ img[src='/src/assets/boss.png'] ~ p {
   font-size: 24px;
   margin-block: 24px;
   text-align: center;
+  max-width: 600px;
 }
 
 /* position absolute gif elements */
