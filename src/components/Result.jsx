@@ -6,7 +6,7 @@ import datingGif from "../assets/dating-unscreen.gif";
 export default function Result() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { randomScore, loveMessage, name, crushName } = location.state;
+  const { score, loveMessage, name, crushName } = location.state;
   console.log(location.state)
   return (
     <>
@@ -17,7 +17,7 @@ export default function Result() {
           <p>{name}</p>
         </div>
 
-        <p>{randomScore}%</p>
+        <p>{score}%</p>
 
         <div>
           <img className="submission_container_logo" src={girlIcon} alt="boss icon" />
