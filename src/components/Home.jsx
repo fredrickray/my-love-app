@@ -5,7 +5,7 @@ import boyIcon from "../assets/boss.png";
 import girlIcon from "../assets/woman.png";
 import Swal from 'sweetalert2';
 import { calculateLoveScore } from '../services/loveMatch'
-import {matchConditions} from '../services/matchConditions'
+import { matchConditions } from '../services/matchConditions'
 export default function Home() {
   const navigate = useNavigate();
   const [name, setName] = useState('');
@@ -26,6 +26,18 @@ export default function Home() {
       })
       // alert('Please enter both names to calculate the match.');
       return; // Exit the function if inputs are empty
+    }
+
+    if (name.toLowerCase() == "fredrick" || name.toLowerCase() == 'fred' || name.toLowerCase() == "tobe" || name.toLowerCase() == "tobechukwu" || name.toLowerCase() == "anyanwu" || crushName.toLowerCase() == 'fredrick' || crushName.toLowerCase() == 'fred' || crushName.toLowerCase() == 'tobe' || crushName.toLowerCase() == 'tobechukwu' || crushName.toLowerCase() == 'anyanwu') {
+      Swal.fire({
+        position: "top-right",
+        toast: true,
+        icon: "error",
+        title: "Kai kai kai change that name fast 🙄👀",
+        showConfirmButton: false,
+        timer: 3500
+      })
+      return;
     }
 
 
